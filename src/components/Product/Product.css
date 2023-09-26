@@ -1,0 +1,31 @@
+.product img{
+        width: 286px;
+        height: 286px;
+        border-radius: 8px;
+
+} 
+.product{
+    padding: 7px;
+}
+.product-card{
+    position: relative;
+    width: 300px;
+    height: 570px;
+    border-radius: 8px;
+    border: 1px solid #95A0A7;
+}
+footer{
+    border-radius :8px ;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: absolute;
+    bottom: 0;
+    background-color: #FFE0B3;
+}
+footer:hover{
+    background-color: orange;
+    color: white;
+}

@@ -1,0 +1,25 @@
+
+.header{
+    padding-left: 112px;
+    padding-right: 97px;
+    background-color: #1C2B35;   
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header a {
+    margin-left: 36px;
+    color: white;
+    text-decoration: none;
+    gap: 32px;
+    font-family: Lato;
+    font-size: 1.0625rem;
+    letter-spacing: 0.00531rem;
+   
+}
+.header a:hover {
+    color: #ffee10;
+    box-shadow: 0 0 5px #ffee10;
+    text-shadow: 0 0 5px #ffee10;
+  }
