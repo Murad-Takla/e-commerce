@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import "./Shop.css"
 import Product from '../Product/Product';
+import OrderSummery from '../OrderSummery/OrderSummery';
 const Shop = () => {
     const [products, setProducts] = useState([])
-    const [orderProduct, serOrderProduct] = useState(0)
+    
     const [cart , setCart]= useState ([]) 
-   const [totalPrice , setTotalPrice] =  useState(0)
+ 
     
     useEffect(() => {
         fetch('products.json')
@@ -16,7 +17,7 @@ const Shop = () => {
       const  newCart = [...cart , product]
       setCart(newCart)
    
-      setTotalPrice(totalPrice+product.price)
+      
     }
  
 
@@ -31,22 +32,12 @@ const Shop = () => {
                     ></Product>)
                 }
             </div>
-            <div className="order-summery">
-               <h2>Order Summery</h2>
-                <h4>
-                    Total order :  
-                    {
-                        cart.length
-                    }
-                </h4>
-                <h5>
-                    Total Price : {
-                        totalPrice
-                    }
-                </h5>
+            <div className="cart-container">
+               <OrderSummery cart = {cart}  ></OrderSummery>
+                
             </div>
         </div>
     );
 };
 
-export default Shop; <h3>This is product list</h3>
+export default Shop; 

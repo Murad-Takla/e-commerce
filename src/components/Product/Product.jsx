@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-  import { faCoffee, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { faCoffee, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import "./Product.css"
 const Product = (props) => {
     const { name, img, price, seller, ratings, id } = props.product
