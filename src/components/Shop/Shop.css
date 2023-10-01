@@ -4,7 +4,7 @@
 }
 .shop-container{
  display: grid;
- grid-template-columns: 4fr 1fr;
+ grid-template-columns: 3fr 1fr;
 }
 .product-container{
     margin: 10px 104px;
@@ -19,3 +19,11 @@
    
     background-color:  rgba(255, 153, 0, 0.30);;
 }
+
+@media only screen and (min-width: 1000px) {
+    
+
+    .product-container{
+        grid-template-columns: repeat(2, 1fr);
+       }
+  }

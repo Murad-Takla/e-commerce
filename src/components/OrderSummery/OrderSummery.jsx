@@ -6,16 +6,17 @@ import { faCoffee, faShoppingCart , faTrash  , faArrowRight} from '@fortawesome/
 
                   
 const OrderSummery = ({cart}) => {
-    console.log(cart)
-     
-    let total  = 0  ,  totalShipping =  0;
-    
-    cart.forEach(el => {
 
-        total+= el.price;
-        totalShipping += el.shipping
-        
-    });
+  
+    let total  = 0  ,  totalShipping =  0 , quantity = 0 ;
+    
+
+    for (const product of cart){
+         quantity += product.quantity
+        total+= (product.price * product.quantity );
+        totalShipping += product.shipping
+    }
+
     const  tax =  (total * 0.1).toFixed(2)
      
     const grandTotal = (total + totalShipping +  parseFloat(tax) ); 
@@ -28,7 +29,7 @@ const OrderSummery = ({cart}) => {
                 <p>
                     Total order :
                     {
-                        cart.length
+                       quantity
                     }
                 </p>
                 <p>
