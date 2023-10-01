@@ -7,7 +7,7 @@ import logo from '../../images/Logo.svg'
          <nav className='header'> 
             <img src= {logo} alt="" />
 
-            <div>
+            <div className='header-list'>
                 <a href="">Shop</a>
                 <a href="">Order Review</a>
                 <a href="">Order Inventory</a>

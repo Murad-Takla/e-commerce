@@ -14,6 +14,9 @@
     border-radius: 8px;
     border: 1px solid #95A0A7;
 }
+.product-info{
+    margin-top: 20px;
+}
 footer{
     
     border-radius :8px ;
@@ -30,4 +33,17 @@ footer{
 footer:hover{
     background-color: orange;
     color: white;
+}
+@media screen and (min-width : 375px) {
+    .product-card{
+        position: relative;
+        width: 200px;
+        height: 500px;
+       
+    }
+    .product img{
+        width: 100%;
+        
+
+} 
 }
