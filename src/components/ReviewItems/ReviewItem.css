@@ -1,0 +1,32 @@
+
+.review-container{
+    margin: 0 auto 10px;
+    padding: 10px;
+    display: flex;
+   
+    width: 510px;
+    border: 1px solid rgb(152, 139, 139);
+    border-radius: 5px;
+}
+.review-container img{
+    width: 92px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+.review-details-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.delete-btn:hover{
+    cursor: pointer;
+}
+.delete-btn{
+    width: 32px;
+    display: flex;
+    align-items: center;  
+}
+.cartItems-container{
+    border-radius: 10px;
+    background: whitesmoke;
+}

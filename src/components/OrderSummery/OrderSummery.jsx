@@ -23,7 +23,7 @@ const OrderSummery = ({cart}) => {
 
     return (
         <div className='cart'> 
-            <h1 className='title'>Order Summery</h1>
+            <h1 className='title'>Order Summary</h1>
 
             <div className='cart-info'>
                 <p>

@@ -24,12 +24,10 @@
     text-shadow: 0 0 5px #ffee10;
   }
   @media screen and (min-width : 375px ) {
-    .header-list{
-        display: none;
-    }
+   
     nav.header {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
     }
   }

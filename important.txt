@@ -1,0 +1,6 @@
+Layout and Outlet 
+------------------
+Layout : 
+        Which one will not change in different page. I mean this one is fixed (For example : navbar )
+Outlet :
+        Which one will be changed in different pages. I mean this one is not fixed  (shop product) 

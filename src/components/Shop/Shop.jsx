@@ -1,26 +1,15 @@
 import React, { useEffect, useState } from 'react';
+import { useLoaderData } from "react-router-dom";
 import "./Shop.css"
 import Product from '../Product/Product';
 import OrderSummery from '../OrderSummery/OrderSummery';
 import { addToDb, getShoppingCart } from '../../utilities/fakedb';
 const Shop = () => {
-    const [products, setProducts] = useState([])
+   
+    const products = useLoaderData()
     
     const [cart , setCart]= useState ([]) 
- 
     
-    useEffect(() => {
-        fetch('products.json')
-            .then(res => res.json())
-            .then(data => {
-                setProducts(data)
-            })
-    }, [])
-   
-
-
-
- 
     useEffect( () => {
 
       const storedCart =   getShoppingCart()
@@ -46,14 +35,14 @@ const Shop = () => {
 
 
         if(!exists){
-            console.log("This is not exists in the cart ")
+         //  console.log("This is not exists in the cart ")
 
             selectedProduct.quantity = 1
             newCart = [...cart , selectedProduct]
         }
 
         else{
-            console.log("This is exists in the cart ")
+         //   console.log("This is exists in the cart ")
             const remain =  cart.filter(product => product.id !== selectedProduct.id) 
             exists.quantity = exists.quantity + 1 
             newCart = [...remain ,  selectedProduct]
