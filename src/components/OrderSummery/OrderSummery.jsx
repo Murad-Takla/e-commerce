@@ -3,9 +3,10 @@ import "./OrderSummery.css"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCoffee, faShoppingCart , faTrash  , faArrowRight} from '@fortawesome/free-solid-svg-icons';           
+import { Link } from 'react-router-dom';
 
                   
-const OrderSummery = ({cart}) => {
+const OrderSummery = ({cart , clearCart }) => {
 
   
     let total  = 0  ,  totalShipping =  0 , quantity = 0 ;
@@ -29,7 +30,7 @@ const OrderSummery = ({cart}) => {
                 <p>
                     Total order :
                     {
-                       quantity
+                       quantity 
                     }
                 </p>
                 <p>
@@ -49,10 +50,14 @@ const OrderSummery = ({cart}) => {
             </div>
             <div className='cart-btn'>
                 
-                <button>Clear cart  <FontAwesomeIcon  id='clear-btn' className='icon clear-btn' icon= {faTrash}></FontAwesomeIcon></button>
+                <button
+                onClick={clearCart}
+                >Clear cart  <FontAwesomeIcon  id='clear-btn' className='icon clear-btn' icon= {faTrash}></FontAwesomeIcon></button>
                 
-               
-                <button>Review order  <FontAwesomeIcon className='review-btn icon' icon={faArrowRight}></FontAwesomeIcon></button>
+                <Link className='review-btn ' to= '/order'>
+                <button>Review order  <FontAwesomeIcon  icon={faArrowRight}></FontAwesomeIcon></button>
+                </Link>
+                
             </div>
         </div>
     );

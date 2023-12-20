@@ -39,6 +39,8 @@ button{
     border-radius: 4px;
     background: #FF3030;
     cursor: pointer;
+    font-weight: 800;
+    gap: 10px;
 }
 button:hover{
     background: #6e0707;
@@ -48,4 +50,19 @@ button:hover{
         width: 26px;
         height: 26px;   
 
+}
+
+.review-btn {
+    width: 100%;
+    background: #FF3030;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    border-radius: 4px;
+    gap: 10px;
+    
+
+}
+.review-btn:hover{
+    background: #6e0707;
 }
