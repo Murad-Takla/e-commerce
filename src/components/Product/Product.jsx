@@ -4,6 +4,7 @@ import { faCoffee, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import "./Product.css"
 const Product = (props) => {
     const { name, img, price, seller, ratings, id } = props.product
+
     
     return (
         <>
@@ -11,6 +12,10 @@ const Product = (props) => {
             <div className='product-card'>
 
                 <div className='product'>
+
+                    {
+                        img ? <p> </p> : <p>Image not found</p>
+                    }
                     <img src={img} alt="" />
                     <h3>{name}</h3>
                     <h3>Price : ${price}</h3>
