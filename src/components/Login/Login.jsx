@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import './Login.css'
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import GoogleIcon from '../../icons/GoogleIcon';
 import { AuthContext } from '../../Contexts/UserContext';
 
@@ -8,9 +8,11 @@ import { AuthContext } from '../../Contexts/UserContext';
 const Login = () => {
 
     const { signInHandler } = useContext(AuthContext)
-
-    console.log(signInHandler)
+    const navigate  = useNavigate()
     const [error , setError] = useState(null)
+    const location = useLocation()
+
+    const from =location.state?.from?.pathname || '/'
 
     const formHandler = (e) => {
         e.preventDefault()
@@ -19,12 +21,15 @@ const Login = () => {
         const email = form.email.value
         const password = form.password.value
 
-        console.log(email , password)
+
+
+        //console.log(email , password)
 
         signInHandler(email , password).then((result) => {
             const user = result.user
             setError("Successfully Logged In ")
             form.reset()
+            navigate(from , {replace : true})
         }).catch(error => {
             console.error(error)
             

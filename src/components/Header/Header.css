@@ -1,5 +1,6 @@
 
 .header{
+
     padding-left: 112px;
     padding-right: 97px;
     background-color: #1C2B35;   
@@ -22,6 +23,18 @@
     color: #ffee10;
     box-shadow: 0 0 5px #ffee10;
     text-shadow: 0 0 5px #ffee10;
+  }
+
+  .btn-logOut{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    margin-left: auto;
+    padding: 5px;
+  }
+  button:hover{
+    color: #ffee10;
   }
   @media screen and (min-width : 375px ) {
    

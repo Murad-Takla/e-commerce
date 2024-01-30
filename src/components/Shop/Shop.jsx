@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import "./Shop.css"
 import Product from '../Product/Product';
 import OrderSummery from '../OrderSummery/OrderSummery';
 import { addToDb, deleteShoppingCart, getShoppingCart } from '../../utilities/fakedb';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Shop = () => {
 
     const products = useLoaderData()
@@ -69,7 +72,12 @@ const Shop = () => {
 
             </div>
             <div className="cart-container">
-                <OrderSummery clearCart={clearCart} cart={cart}  ></OrderSummery>
+                <OrderSummery clearCart={clearCart} cart={cart}  >
+                <Link className='review-btn ' to='/order'>
+                    <button> Order Summary  <FontAwesomeIcon
+                     icon={faArrowRight}></FontAwesomeIcon></button>
+                </Link>
+                </OrderSummery>
             </div>
         </div>
     );
